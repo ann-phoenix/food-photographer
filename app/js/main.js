@@ -24,7 +24,6 @@ $(function () {
 	});
 
 	/*Vertical navigation and scrollspy*/
-
 	//scrollSpy function
 	function scrollSpy() {
 		var sections = ['header', 'about', 'portfolio', 'services'];
@@ -41,21 +40,31 @@ $(function () {
 	}
 
 	// smooth scrolling navigation
-	$("nav a").click(function () {
-		var target = $(this).attr("href");
-		$("body, html").animate({
-			scrollTop: $(target).offset().top
-		}, 700);
-		return false;
-	});
-
-	//scrollSpy call
 	$(document).ready(function () {
-		scrollSpy();
-	});
+		var nav = $('.content-nav');
+		if (nav.length) {
+			var contentNav = nav.offset().top;
+		}
 
-	$(window).scroll(function () {
-		scrollSpy();
-	});
+		$('nav a').click(function () {
+			var target = $(this.hash);
+			if (target.length) {
+				$('body, html').animate({
 
+					scrollTop: $(target).offset().top
+				}, 700);
+				return false;
+			};
+		});
+
+		// scrollSpy call
+		$(document).ready(function () {
+			scrollSpy();
+		});
+
+		$(window).scroll(function () {
+			scrollSpy();
+		});
+
+	});
 });

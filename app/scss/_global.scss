@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -151,6 +151,8 @@ input:focus {
   color: $green;
 }
 
-// body.show-header__menu {
-//   overflow: hidden;
-// }
+
+body.no-scroll,
+body.show-header__menu {
+  overflow: hidden;
+}
