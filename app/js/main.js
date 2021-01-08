@@ -4,6 +4,7 @@ $(function () {
 	let headerH = header.innerHeight();
 	let scrollTop = $(window).scrollTop();
 	let headerMenuToggle = $('#headerMenuToggle');
+	let headerMenuToggleMobile = $('#headerMenuToggleMobile');
 	let headerMenu = $('#header__menu');
 
 
@@ -67,4 +68,29 @@ $(function () {
 		});
 
 	});
+
+	 /*Burger*/
+	 headerMenuToggle.on('click', function (event) {
+    event.preventDefault();
+		$('body').toggleClass('show-header__menu');
+    $(this).toggleClass('active');
+    headerMenu.toggleClass('show');
+	});
+
+	headerMenuToggleMobile.on('click', function (event) {
+    event.preventDefault();
+		$('body').toggleClass('show-header__menu');
+    $(this).toggleClass('active');
+    headerMenu.toggleClass('show');
+	});
+
+	
+	$(window).on('resize', function () {
+		$('body').removeClass('show-header__menu');
+		headerMenuToggle.removeClass('active');
+		headerMenuToggleMobile.removeClass('active');
+    headerMenu.removeClass('show');
+  });
+
+
 });

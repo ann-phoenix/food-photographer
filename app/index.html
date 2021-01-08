@@ -26,10 +26,16 @@
                         <img class="logo__img" src="images/logo.png" alt="">
                     </a>
                     <nav class="menu" id="header__menu">
-                        <a class="menu__link" data-scroll="#about" href="#">Обо мне</a>
-                        <a class="menu__link" data-scroll="#portfolio" href="#">Портфолио</a>
-                        <a class="menu__link" data-scroll="#services" href="#">Услуги</a>
-                        <a class="menu__link" data-scroll="#contacts" href="#">Контакты</a>
+                        <div class="menu__inner">
+                            <a class="menu__link" data-scroll="#about" href="#">Обо мне</a>
+                            <a class="menu__link" data-scroll="#portfolio" href="#">Портфолио</a>
+                            <a class="menu__link" data-scroll="#services" href="#">Услуги</a>
+                            <a class="menu__link" data-scroll="#contacts" href="#">Контакты</a>
+                            <button class="burger__mobile burger" id="headerMenuToggleMobile">
+                                <span class="burger__line burger__line--first"></span>
+                                <span class="burger__line burger__line--second"></span>
+                            </button>
+                        </div>
                     </nav>
                     <button class="burger" id="headerMenuToggle">
                         <span class="burger__line burger__line--big"></span>
@@ -39,7 +45,6 @@
                     <div class="phone">
                         <a class="phone__link" href="tel:79182458818">+7 918 24 588 18</a>
                     </div>
-                    
                 </div>
             </header>
             <!--/header-->

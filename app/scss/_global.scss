@@ -15,14 +15,15 @@ html {
 
 html,
 body {
-  // height: 100%;
   position: relative;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-
 }
 
+body.show-header__menu {
+  overflow: hidden;
+}
 
 .wrapper {
   display: flex;
@@ -38,7 +39,6 @@ body {
 .footer {
   flex: 0 0 auto;
 }
-
 
 ul,
 ol,
@@ -149,10 +149,4 @@ input:focus {
 
 .link:active {
   color: $green;
-}
-
-
-body.no-scroll,
-body.show-header__menu {
-  overflow: hidden;
 }
