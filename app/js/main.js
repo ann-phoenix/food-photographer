@@ -27,10 +27,10 @@ $(function () {
 	/*Vertical navigation and scrollspy*/
 	//scrollSpy function
 	function scrollSpy() {
-		var sections = ['header', 'about', 'portfolio', 'services'];
-		var current;
+		let sections = ['header','about','portfolio','services','contacts'];
+		let current;
 
-		for (var i = 0; i < sections.length; i++) {
+		for (let i = 0; i < sections.length; i++) {
 			if ($('#' + sections[i]).offset().top <= $(window).scrollTop()) {
 				current = sections[i];
 			}
@@ -42,20 +42,20 @@ $(function () {
 
 	// smooth scrolling navigation
 	$(document).ready(function () {
-		var nav = $('.content-nav');
+		let nav = $('.content-nav');
 		if (nav.length) {
-			var contentNav = nav.offset().top;
+			let contentNav = nav.offset().top;
 		}
 
 		$('nav a').click(function () {
-			var target = $(this.hash);
+			let target = $(this.hash);
 			if (target.length) {
 				$('body, html').animate({
 
 					scrollTop: $(target).offset().top
 				}, 700);
 				return false;
-			};
+			}
 		});
 
 		// scrollSpy call
@@ -84,7 +84,6 @@ $(function () {
     headerMenu.toggleClass('show');
 	});
 
-	
 	$(window).on('resize', function () {
 		$('body').removeClass('show-header__menu');
 		headerMenuToggle.removeClass('active');

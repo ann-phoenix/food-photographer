@@ -1,4 +1,49 @@
-@media (max-width: 1200px) {
+@media (max-width: 1470px) {
+
+	//navigation
+	.navigation {
+		left: 1%;
+		transform: translate(-1%, -50%);
+	}
+
+	.navigation__link {
+		padding: 4px;
+		font-size: 10px;
+	}
+
+	//header
+	.menu {
+		margin-right: 100px;
+		margin-left: 25px;
+	}
+
+	.menu__link {
+		margin: 0 30px;
+	}
+
+	//main
+	.main__title {
+		font-size: 40px;
+	}
+
+	.main__title-photo {
+		font-size: 50px;
+		bottom: -28px;
+		right: -130px;
+	}
+
+	.main__title-food {
+		font-size: 65px;
+		top: -36px;
+	}
+}
+
+@media (max-width: 1290px) {
+
+	//navigation
+	.navigation {
+		display: none;
+	}
 
 	//header
 	.header {
@@ -29,9 +74,18 @@
 	.phone__link {
 		font-size: 16px;
 	}
+
+	//main
+	.main__inner::before {
+		right: -44%;
+	}
+
+	.main__img {
+		right: 5%;
+	}
 }
 
-@media (max-width: 850px) {
+@media (max-width: 870px) {
 
 	// header
 	.header__inner {
@@ -56,7 +110,7 @@
 		overflow: auto;
 		margin: 0;
 		justify-content: center;
-		min-height: 757px;
+		min-height: 780px;
 
 		&.show {
 			transform: translateY(0);
@@ -65,7 +119,6 @@
 		&__inner {
 			flex-direction: column;
 			position: relative;
-			top: -20%;
 		}
 
 		&__inner:after,
@@ -110,7 +163,6 @@
 			width: auto;
 			color: $black;
 		}
-
 	}
 
 	.burger {
@@ -119,7 +171,70 @@
 
 	.burger .burger__mobile {
 		margin-right: 0;
+	}
 
+	//main
+	.main__title {
+		font-size: 30px;
+	}
+
+	.main__title-photo {
+		font-size: 35px;
+		bottom: -18px;
+		right: -20px;
+	}
+
+	.main__title-food {
+		font-size: 50px;
+		top: -26px;
+		left: -20px;
+	}
+
+	.main__img {
+		right: 8%;
+	}
+}
+
+@media (max-width: 765px) {
+
+	//main
+	.main {
+		padding-top: 40px;
+		margin-bottom: 160px;
+	}
+
+	.main__inner {
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+
+	.main__inner:before {
+		content: none;
+	}
+
+	.main__info {
+		margin-bottom: 25px;
+		font-size: 17px;
+	}
+
+	.main__text {
+		order: 1;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	.main__title {
+		margin-bottom: 25px;
+	}
+
+	.main__img {
+		right: 0;
+		bottom: 0;
+		margin: 55px 0;
+	}
+
+	.main__social {
+		display: none;
 	}
 }
 
