@@ -27,7 +27,7 @@ $(function () {
 	/*Vertical navigation and scrollspy*/
 	//scrollSpy function
 	function scrollSpy() {
-		let sections = ['header','about','portfolio','services','contacts'];
+		let sections = ['header','about','portfolio','services'];
 		let current;
 
 		for (let i = 0; i < sections.length; i++) {
