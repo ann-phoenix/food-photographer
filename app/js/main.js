@@ -27,8 +27,9 @@ $(function () {
 	/*Vertical navigation and scrollspy*/
 	//scrollSpy function
 	function scrollSpy() {
-		let sections = ['header','about','portfolio','services'];
+		let sections = ['header', 'about', 'portfolio', 'services'];
 		let current;
+
 
 		for (let i = 0; i < sections.length; i++) {
 			if ($('#' + sections[i]).offset().top <= $(window).scrollTop()) {
@@ -69,27 +70,26 @@ $(function () {
 
 	});
 
-	 /*Burger*/
-	 headerMenuToggle.on('click', function (event) {
-    event.preventDefault();
+	/*Burger*/
+	headerMenuToggle.on('click', function (event) {
+		event.preventDefault();
 		$('body').toggleClass('show-header__menu');
-    $(this).toggleClass('active');
-    headerMenu.toggleClass('show');
+		$(this).toggleClass('active');
+		headerMenu.toggleClass('show');
 	});
 
 	headerMenuToggleMobile.on('click', function (event) {
-    event.preventDefault();
+		event.preventDefault();
 		$('body').toggleClass('show-header__menu');
-    $(this).toggleClass('active');
-    headerMenu.toggleClass('show');
+		$(this).toggleClass('active');
+		headerMenu.toggleClass('show');
 	});
 
 	$(window).on('resize', function () {
 		$('body').removeClass('show-header__menu');
 		headerMenuToggle.removeClass('active');
 		headerMenuToggleMobile.removeClass('active');
-    headerMenu.removeClass('show');
-  });
-
+		headerMenu.removeClass('show');
+	});
 
 });

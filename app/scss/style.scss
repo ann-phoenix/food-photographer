@@ -434,22 +434,24 @@
 }
 
 .item__img {
-	object-fit: cover;
 
 	&-cheese {
 		width: 430px;
 		height: 640px;
+		object-fit: cover;
 	}
 
 	&-sweet,
 	&-caviar {
 		width: 325px;
 		height: 400px;
+		object-fit: cover;
 	}
 
 	&-seafood {
 		width: 320px;
 		height: 490px;
+		object-fit: cover;
 	}
 }
 
@@ -679,6 +681,7 @@
 
 .services__image {
 	overflow: hidden;
+	display: inline-block;
 }
 
 .services__image .services__img {
@@ -686,6 +689,7 @@
 	-o-transition: all 1s ease-out;
 	-webkit-transition: all 1s ease-out;
 	opacity: .75;
+	display: block;
 }
 
 .services__image .services__img:hover {
